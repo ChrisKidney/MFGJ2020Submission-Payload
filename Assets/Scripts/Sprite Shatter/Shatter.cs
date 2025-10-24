@@ -609,7 +609,7 @@
                         Vector2 normalizedVectorFromExplosionSource = (new Vector2(shatterObject.position.x - explosionSource.x, shatterObject.position.y -
                                 explosionSource.y)).normalized;
                         if (shatterObject.GetComponent<Rigidbody2D>() != null)
-                            shatterObject.GetComponent<Rigidbody2D>().velocity = new Vector2(normalizedVectorFromExplosionSource.x *
+                            shatterObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(normalizedVectorFromExplosionSource.x *
                                     shatterDetails.explosionForce.x, normalizedVectorFromExplosionSource.y * shatterDetails.explosionForce.y);
                     }
                 }
